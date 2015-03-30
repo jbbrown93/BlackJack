@@ -1,0 +1,178 @@
+CONTACT INFO:
+
+Jordan Brown
+jbrown94@u.rochester.edu
+CSC 171 SPRING 2015
+Project: BlackJack Card Game
+
+
+DESCRIPTION OF CLASS DESIGN:
+
+As advised in the Project instructions, I designed my classes with High Cohesion and Low Coupling in mind.
+For High Cohesion, I made the purpose of each of my classes very specific.For instance, my Card class
+represents an individual card, and only knows about it's card value. The DeckOfCards class represents a deck of cards, and is an ArrayList 
+of Cards object that can shuffle, deal random cards, display the initial draw. The Hand class knows 
+the rules of the game, how to determine the status and score of each player, and can declare
+a winner. In addition, the Hand class knows the player and dealer's names. The PlayersHand parent class, 
+represents and only knows information about an arbitrary player's hand. PlayersHand knows how to add cards, 
+retrieve the number of cards in hand, and represent the information as strings. The children classes of 
+PlayersHand, Dealer and Player (representing the dealer and human player of the game, respectively), 
+inherit the state and behavior of PlayersHand, but also have added additional information that are 
+specific to the Player and Dealer. For instance, Dealer has an additional Artificial Intelligence 
+algorithm implemented in its methods, and the Player has a Scanner object implemented in the 
+constructor that prompts the human player to enter their name. Lastly, the BlackJack class contains a 
+main method that starts and orchestrates a game of Black Jack. It also contains a method that allows the
+player whether they would like to play again or quit. 
+
+DESCRIPTION OF BLACKJACK ALGORITHM IMPLEMENTATION:
+
+For my algorithm implementation, I used the Top-Down, Stepwise Refinement Process. I first wrote the 
+problem as one, 'top', sentence: simulate a single player game of BlackJack, between the user and 
+computer. Then, I imagined playing one full game of BlackJack, and wrote down all the necessary steps 
+that happen during the game from beginning (e.g. Asking the player for name, shuffling deck) to end 
+(e.g. declaring a winner, asking the player whether they want to play again). Next, I took each, 
+individual step, and did my 'first refinement' by dividing the step into a series of smaller task and
+listing them in the order they would happen. Then I broke this down further, my 'second refinement', 
+and added variable names. I then translated the algorithm into Java code. 
+
+
+DESCRIPTION OF TESTING STRATEGY:
+
+For my testing strategy , I used JUnit and my own written test classes to test for bugs. For my JUnit
+test classes, I tested for equality in objects and truth or false values for boolean methods.
+To make sure I accounted for all errors, I tried all the different possibilities for various methods. 
+For my custom made test classes, I used various print statements and calling of methods to see if the 
+values matched and the output was what I expected. 
+
+ENHANCEMENTS IN BLACKJACK GAME:
+
+To minimize code duplication, I created a Parent class, called PlayersHand, which contains all the 
+methods that are needed for an arbitrary player's hand, such as adding and accessing cards. I then 
+created children, called the Dealer and Player, that inherited these methods and had additional,
+more specific methods. The additional methods were for their individual names (since the Human Player 
+needed to be prompted for their name, while the dealer could have the default name of 'Dealer'). 
+In the children classes, I also overrided the parent's toString method, to make the toString method
+more useful to the children. Although I did not need to use the super reference in the children's 
+constructors since the parent's constructor is parameterless, I wanted to explicitly call the super
+keyword to make it clear that the child class is inheriting the parent's state and behavior. 
+
+
+INSTRUCTIONS ON RUNNING CODE:
+
+1. Move project file to Desktop
+2. Open Command Prompt window
+3. Enter cd <Desktop> 
+4. Enter cd <Lab file name> 
+5. Enter javac -cp -d <destination folder where .class files are stored> <path to the .java files>
+
+Do not include angle brackets
+
+
+	e.g.
+
+To compile my package from the command line:
+	
+ 	Enter javac -cp. -d c:\workspace\lab06\bin csc171\blackjack\*.java
+	Enter javac -cp. -d c:\workspace\lab06\bin csc171\blackjack\tests\*.java
+	
+
+To run class from command line: 
+	
+	NOTE: Make sure to run the java main method class called BlackJack
+	
+	Enter java -cp.csc171.blackjack.BlackJack
+
+
+The Prompts user will be asked...
+
+ 7. Enter your name: <type in name and press enter>
+ 
+ ...
+ 
+ 8. <name>, would you like to choose to ''Hit'' or ''Stay'': <Type in 'hit' or 'stay', ignores case>
+ 
+ ...
+ 
+ 9. Enter the word 'yes' to play again, or anything else to end the game: <Type 'yes', ignores case>
+ 																		<Type anything else to quit>
+ 	NOTE: You MUST type in the full word 'yes' but case doesn't matter.
+    
+    
+
+Do not include angle brackets
+
+INSTRUCTIONS ON RUNNING TEST CODE:
+
+#FOR THE FOLLOWING TEST CLASSES...
+
+  - BlackJackTest, DeckOfCardsTest, HandTestIsWin (specific for testing the Hand isWin method),
+  	PlayersHandTest, PlayerTest, and HandTestTotalScore (specific for the Hand class' totalScore method)
+  	
+   
+1. Move project file to Desktop
+2. Open Command Prompt window
+3. Enter cd <Desktop> 
+4. Enter cd <Lab file name> 
+5. Enter javac -cp -d <destination folder where .class files are stored> <path to the .java files>
+
+Do not include angle brackets
+
+	e.g.
+
+To compile my test package from the command line:
+	
+	Enter javac -cp. -d c:\workspace\lab06\bin csc171\blackjack\tests\*.java
+	
+
+To run class from command line: 
+	
+	Enter java -cp.csc171.blackjack.tests.BlackJackTest
+	Enter java -cp.csc171.blackjack.tests.DeckOfCardsTest
+  	Enter java -cp.csc171.blackjack.tests.HandTestIsWin
+  	Enter java -cp.csc171.blackjack.tests.PlayersHandTest
+  	Enter java -cp.csc171.blackjack.tests.PlayerTest
+  	Enter java -cp.csc171.blackjack.tests.HandTestTotalScore
+
+
+#For the BlackJackTest, user will be prompted
+7. Enter the word 'yes' to play again, or anything else to end the game: <type in for string input>
+
+#For the PlayerTest, user will be prompted 
+8. Enter your name: <type in for string input>
+
+Do not include angle brackets
+
+
+#FOR THE FOLLOWING JUNIT CLASSES...
+NOTE: For JUnit 4.X
+ 
+ - CardTest, DealerTest,   and 
+ HandTest (You MUST answer the prompt in command line for the HandTest to continue testing!!)
+
+1. Move project file to Desktop
+2. Open Command Prompt window
+3. Enter cd <Desktop> 
+4. Enter cd <Lab file name>
+5. Move down directories to find the directory where the JUnit test classes are located
+6. Compile the Test class and the Runner class
+7. Run the JUnit Runner
+
+EXAMPLES: 
+
+Compile the JUnit test classes
+
+	e.g
+	javac -cp .;c:\junit\junit4.jar TestJUnit4.java
+	
+Run the JUnit test classes
+
+	e.g.
+	java -cp .:/usr/share/java/junit.jar org.junit.runner.JUnitCore <Test class name>
+
+
+Do not include brackets
+
+
+
+
+ 

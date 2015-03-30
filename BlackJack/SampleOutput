@@ -1,0 +1,83 @@
+#OUTPUT FOR BLACKJACK GAME
+
+#NOTE: This is output of 3 consecutive games of BlackJack 
+
+
+
+
+Enter your name: Jordan
+Jordan draws 1.
+Dealer draws 8.
+Jordan, please choose to ''Hit'' or ''Stay'': hit
+Jordan's card hand is: [1, 2]
+Jordan's score is: 13
+Jordan's status is: Continue
+
+Jordan, please choose to ''Hit'' or ''Stay'': h
+Jordan's card hand is: [1, 2, 4]
+Jordan's score is: 17
+Jordan's status is: Continue
+
+Jordan, please choose to ''Hit'' or ''Stay'': s
+Dealer's turn is now over.
+
+Jordan's final score is: 17
+Jordan's card hand is: [1, 2, 4]
+
+Dealer's final score is: 23
+Dealer's card hand is: [8, 2, 3, 10]
+
+Dealer Busts! Jordan won!
+
+Enter the word 'yes' to play again, or anything else to end the game: yes
+Enter your name: Jordan
+Jordan draws 9.
+Dealer draws 2.
+Jordan, please choose to ''Hit'' or ''Stay'': HIT
+Jordan's card hand is: [9, 3]
+Jordan's score is: 12
+Jordan's status is: Continue
+
+Jordan, please choose to ''Hit'' or ''Stay'': stay
+Dealer's turn is now over.
+
+Jordan's final score is: 12
+Jordan's card hand is: [9, 3]
+
+Dealer's final score is: 12
+Dealer's card hand is: [2, 10, 1]
+
+It's a draw!
+
+Enter the word 'yes' to play again, or anything else to end the game: yes
+Enter your name: Jordan
+Jordan draws 2.
+Dealer draws 4.
+Jordan, please choose to ''Hit'' or ''Stay'': hIt
+Jordan's card hand is: [2, 7]
+Jordan's score is: 9
+Jordan's status is: Continue
+
+Jordan, please choose to ''Hit'' or ''Stay'': hit
+Jordan's card hand is: [2, 7, 9]
+Jordan's score is: 18
+Jordan's status is: Continue
+
+Jordan, please choose to ''Hit'' or ''Stay'': hit
+Jordan's card hand is: [2, 7, 9, 5]
+Jordan's score is: 23
+Jordan's status is: Bust
+
+Jordan, cannot draw anymore because your status is: Bust
+
+Dealer's turn is now over.
+
+Jordan's final score is: 23
+Jordan's card hand is: [2, 7, 9, 5]
+
+Dealer's final score is: 4
+Dealer's card hand is: [4]
+
+Jordan Busts! Dealer won!
+
+Enter the word 'yes' to play again, or anything else to end the game: no
